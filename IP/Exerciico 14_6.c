@@ -1,11 +1,3 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <stdio.h>
 
 int main()
@@ -183,6 +175,26 @@ int main()
         printf("A soma e maior na linha %d, sendo %d",c,maiorvalor);
     }    
   
+
+    int mutiplicar(int m[Linhas][Colunas], int n[Linhas2][Colunas2]){
+        if(Colunas != Linhas2){
+            printf("ERRO!, MATRIZES NAO PODEM SER MUTIPLICADAS")
+            return 0;
+            break;
+        }
+        int result[Linhas][Colunas2];
+
+
+        for(i=0;i<Linhas;i++){
+            for(j=0;j<Colunas;i++){
+                for(k=0;k<Linhas2;k++){
+                    n += m[i][j]*n[j][k]
+                }      
+            }
+        }
+
+
+    }
   
     inserirvalor(matriz,1,1,1);
     inserirvalor(matriz,5,2,1);
