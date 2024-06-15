@@ -176,36 +176,58 @@ int main()
     }    
   
 
-    int mutiplicar(int m[Linhas][Colunas], int n[Linhas2][Colunas2]){
-        if(Colunas != Linhas2){
-            printf("ERRO!, MATRIZES NAO PODEM SER MUTIPLICADAS")
-            return 0;
-            break;
-        }
-        int result[Linhas][Colunas2];
+    int Colunas2 = 2;
+    int Linhas2 = 2;
+
+    int matriz2[Linhas2][Colunas2];
 
 
-        for(i=0;i<Linhas;i++){
-            for(j=0;j<Colunas;i++){
-                for(k=0;k<Colunas2;k++){
-                    n += m[i][j]*n[j][k]
-                }      
-            }
-        }
-
-
-    }
-  
-
-
-
-  
     inserirvalor(matriz,1,1,1);
     inserirvalor(matriz,5,2,1);
     inserirvalor(matriz,3,1,2);
     inserirvalor(matriz,7,2,2);   
    
-   
+
+    inserirvalor(matriz2,5,1,1);
+    inserirvalor(matriz2,2,2,1);
+    inserirvalor(matriz2,9,1,2);
+    inserirvalor(matriz2,0,2,2);  
+
+
+    //Mutiplicando matrizes
+    void mutiplicar(int m[Linhas][Colunas], int n[Linhas2][Colunas2],int result[Linhas][Colunas2]){
+        if(Colunas != Linhas2){
+            printf("ERRO!, MATRIZES NAO PODEM SER MUTIPLICADAS");
+            return;
+        }
+        
+        for(int i=0;i<Linhas;i++){
+            for(int j=0;j<Colunas2;j++){
+                int s = 0;
+                for(int k=0;k<Colunas;k++){
+                    int a = m[i][k];
+                    int b = n[k][j];
+                    s += a*b;
+                }
+                result[i][j] = s;      
+            }
+        }
+    }
+  
+
+    
+
+    int resultado[Linhas][Colunas2];
+    mutiplicar(matriz, matriz2,resultado);
+
+
+    for(int i = 0;i<2;i++){
+        printf("\n");
+        for(int j = 0;j<2;j++){
+            printf("%d ",resultado[i][j]);
+        }
+    }
+
    
     return 0;
 }
