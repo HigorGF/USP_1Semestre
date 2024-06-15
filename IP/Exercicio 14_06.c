@@ -196,6 +196,10 @@ int main()
 
     }
   
+
+
+
+  
     inserirvalor(matriz,1,1,1);
     inserirvalor(matriz,5,2,1);
     inserirvalor(matriz,3,1,2);
