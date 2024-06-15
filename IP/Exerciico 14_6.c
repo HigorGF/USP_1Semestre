@@ -187,7 +187,7 @@ int main()
 
         for(i=0;i<Linhas;i++){
             for(j=0;j<Colunas;i++){
-                for(k=0;k<Linhas2;k++){
+                for(k=0;k<Colunas2;k++){
                     n += m[i][j]*n[j][k]
                 }      
             }
